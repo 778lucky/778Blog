@@ -5,8 +5,8 @@
     
     <entry>
       <title>9月15日 星期四 小雨转阴</title>
-      <link href="/posts/1002/"/>
-      <url>/posts/1002/</url>
+      <link href="/posts/1001/"/>
+      <url>/posts/1001/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="微信被限制了，运气真差，回归一下原始生活吧！"><a href="#微信被限制了，运气真差，回归一下原始生活吧！" class="headerlink" title="微信被限制了，运气真差，回归一下原始生活吧！"></a>微信被限制了，运气真差，回归一下原始生活吧！</h2>]]></content>
       
@@ -24,8 +24,8 @@
     
     <entry>
       <title>9月12日 星期一 晴</title>
-      <link href="/posts/1001/"/>
-      <url>/posts/1001/</url>
+      <link href="/posts/1002/"/>
+      <url>/posts/1002/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="又是做核酸的一天"><a href="#又是做核酸的一天" class="headerlink" title="又是做核酸的一天"></a>又是做核酸的一天</h2>]]></content>
       
@@ -215,17 +215,6 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
@@ -240,6 +229,17 @@
       <title>友情链接</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
