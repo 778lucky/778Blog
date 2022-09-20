@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>9月20日 星期二 大雨</title>
+      <link href="/posts/1003/"/>
+      <url>/posts/1003/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>科学上网分享</title>
       <link href="/posts/1005/"/>
       <url>/posts/1005/</url>
@@ -11,12 +30,12 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="复制导入进去科学上网工具即可"><a href="#复制导入进去科学上网工具即可" class="headerlink" title="复制导入进去科学上网工具即可"></a>复制导入进去科学上网工具即可</h2><h4 id="不定时更新"><a href="#不定时更新" class="headerlink" title="不定时更新"></a>不定时更新</h4><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyLmNvbV8yMC4yMzkuMTM2LjE5NyIsCiJhZGQiOiAiMjAuMjM5LjEzNi4xOTciLAoicG9ydCI6ICI4MCIsCiJpZCI6ICJjMzIwOGViYS0zZTQ2LTQxMDUtYTliOC00OGVhNGQzNDE0YjUiLAoiYWlkIjogIjAiLAoibmV0IjogInRjcCIsCiJ0eXBlIjogIm5vbmUiLAoiaG9zdCI6ICIiLAoicGF0aCI6ICIiLAoidGxzIjogIiIKfQo=</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
       
-        <tags>
-            
-            <tag> 技术分享 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -24,8 +43,8 @@
     
     <entry>
       <title>9月17日 星期六 晴</title>
-      <link href="/posts/1003/"/>
-      <url>/posts/1003/</url>
+      <link href="/posts/1006/"/>
+      <url>/posts/1006/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -43,8 +62,8 @@
     
     <entry>
       <title>9月16日 星期五 小雨</title>
-      <link href="/posts/1002/"/>
-      <url>/posts/1002/</url>
+      <link href="/posts/1003/"/>
+      <url>/posts/1003/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -261,17 +280,6 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
@@ -297,6 +305,17 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
