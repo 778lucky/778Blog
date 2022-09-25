@@ -6,7 +6,7 @@
   <link href="https://qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://qqb.icu/"/>
-  <updated>2022-09-25T02:37:45.486Z</updated>
+  <updated>2022-09-25T02:48:47.080Z</updated>
   <id>https://qqb.icu/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>宝塔Linux面板7.7.0修复版</title>
-    <link href="https://qqb.icu/posts/1006/"/>
-    <id>https://qqb.icu/posts/1006/</id>
+    <link href="https://qqb.icu/posts/1005/"/>
+    <id>https://qqb.icu/posts/1005/</id>
     <published>2022-09-25T01:39:13.000Z</published>
-    <updated>2022-09-25T02:37:45.486Z</updated>
+    <updated>2022-09-25T02:48:47.080Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="简介说明"><a href="#简介说明" class="headerlink" title="简介说明"></a>简介说明</h4><p>发一下别人备份的7.7版本以及一键破解脚本。</p><p>新装面板，按照顺序依次安装7.7原版，执行一键破解脚本即可。</p><p>提示：破解有风险，请勿在正式环境中使用。本博客仅做收集备份。</p><h4 id="演示截图"><a href="#演示截图" class="headerlink" title="演示截图"></a>演示截图</h4><p><img src="https://s1.328888.xyz/2022/09/25/V2Zep.png" alt="img"></p><h4 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h4><p>宝塔7.7原版<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSO https://qqb.icu/sh/install_panel.sh &amp;&amp; bash install_panel.sh</span><br></pre></td></tr></table></figure></p><p>一键破解脚本<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSO https://qqb.icu/sh/bt_happy.sh &amp;&amp; bash bt_happy.sh</span><br></pre></td></tr></table></figure></p><p>删除面板安全登录入口<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f /www/server/panel/data/admin_path.pl</span><br></pre></td></tr></table></figure><br>声明：除脚本安装外，不会请求除宝塔官网外任何第三方网站，也无需搭建第三方云端。</p>]]></content>
     
@@ -41,7 +41,7 @@
     <link href="https://qqb.icu/posts/1003/"/>
     <id>https://qqb.icu/posts/1003/</id>
     <published>2022-09-20T02:48:00.000Z</published>
-    <updated>2022-09-20T02:48:51.072Z</updated>
+    <updated>2022-09-25T02:49:16.712Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     
@@ -60,8 +60,8 @@
   
   <entry>
     <title>科学上网分享</title>
-    <link href="https://qqb.icu/posts/1007/"/>
-    <id>https://qqb.icu/posts/1007/</id>
+    <link href="https://qqb.icu/posts/1006/"/>
+    <id>https://qqb.icu/posts/1006/</id>
     <published>2022-09-19T13:42:00.000Z</published>
     <updated>2022-09-20T02:49:06.430Z</updated>
     
@@ -82,8 +82,8 @@
   
   <entry>
     <title>9月17日 星期六 晴</title>
-    <link href="https://qqb.icu/posts/1005/"/>
-    <id>https://qqb.icu/posts/1005/</id>
+    <link href="https://qqb.icu/posts/1003/"/>
+    <id>https://qqb.icu/posts/1003/</id>
     <published>2022-09-17T15:06:00.000Z</published>
     <updated>2022-09-20T03:08:50.336Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>9月15日 星期四 小雨转阴</title>
-    <link href="https://qqb.icu/posts/1002/"/>
-    <id>https://qqb.icu/posts/1002/</id>
+    <link href="https://qqb.icu/posts/1001/"/>
+    <id>https://qqb.icu/posts/1001/</id>
     <published>2022-09-15T13:58:00.000Z</published>
     <updated>2022-09-16T15:36:42.480Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>9月12日 星期一 晴</title>
-    <link href="https://qqb.icu/posts/1001/"/>
-    <id>https://qqb.icu/posts/1001/</id>
+    <link href="https://qqb.icu/posts/1002/"/>
+    <id>https://qqb.icu/posts/1002/</id>
     <published>2022-09-12T05:14:00.000Z</published>
     <updated>2022-09-16T15:36:56.678Z</updated>
     
