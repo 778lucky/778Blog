@@ -6,7 +6,7 @@
   <link href="https://www.qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://www.qqb.icu/"/>
-  <updated>2022-09-25T02:23:55.912Z</updated>
+  <updated>2022-09-25T02:37:45.486Z</updated>
   <id>https://www.qqb.icu/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>宝塔Linux面板7.7.0修复版</title>
-    <link href="https://www.qqb.icu/posts/1006/"/>
-    <id>https://www.qqb.icu/posts/1006/</id>
+    <link href="https://www.qqb.icu/posts/1005/"/>
+    <id>https://www.qqb.icu/posts/1005/</id>
     <published>2022-09-25T01:39:13.000Z</published>
-    <updated>2022-09-25T02:23:55.912Z</updated>
+    <updated>2022-09-25T02:37:45.486Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="简介说明"><a href="#简介说明" class="headerlink" title="简介说明"></a>简介说明</h4><p>本文章内容仅作为个人记录学习，不提供任何技术支持，请测试学习后24小时内删除。<br>由于7.7.0版本是最后一个代码开源，且无需登陆的版本，插件比海外版多，无需依赖自建任何第三方云端均可PJ使用，因此很多追求长期稳定服务的还在使用该版本。<br>优化：去除无用接口、减少无用代码执行、减少对于宝塔云端请求、去除面板广告等，保持面板干净清爽。<br>修复：兼容新版本面板运行环境、9月12日修复面板XSS高危漏洞。<br>除脚本安装外，不会请求除宝塔官网外任何第三方网站，也无需搭建第三方云端。</p><h4 id="演示截图"><a href="#演示截图" class="headerlink" title="演示截图"></a>演示截图</h4><p><img src="https://s1.328888.xyz/2022/09/25/V2Zep.png" alt="img"></p><h4 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h4><p>宝塔7.7原版<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSO https://www.qqb.icu/sh/install_panel.sh &amp;&amp; bash install_panel.sh</span><br></pre></td></tr></table></figure></p><p>一键破解脚本<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSO https://www.qqb.icu/sh/bt_happy.sh &amp;&amp; bash bt_happy.sh</span><br></pre></td></tr></table></figure></p><p>删除面板安全登录入口<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f /www/server/panel/data/admin_path.pl</span><br></pre></td></tr></table></figure><br>声明：除脚本安装外，不会请求除宝塔官网外任何第三方网站，也无需搭建第三方云端。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="简介说明"><a href="#简介说明" class="headerlink" title="简介说明"></a>简介说明</h4><p>发一下别人备份的7.7版本以及一键破解脚本。</p><p>新装面板，按照顺序依次安装7.7原版，执行一键破解脚本即可。</p><p>提示：破解有风险，请勿在正式环境中使用。本博客仅做收集备份。</p><h4 id="演示截图"><a href="#演示截图" class="headerlink" title="演示截图"></a>演示截图</h4><p><img src="https://s1.328888.xyz/2022/09/25/V2Zep.png" alt="img"></p><h4 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h4><p>宝塔7.7原版<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSO https://qqb.icu/sh/install_panel.sh &amp;&amp; bash install_panel.sh</span><br></pre></td></tr></table></figure></p><p>一键破解脚本<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSO https://qqb.icu/sh/bt_happy.sh &amp;&amp; bash bt_happy.sh</span><br></pre></td></tr></table></figure></p><p>删除面板安全登录入口<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f /www/server/panel/data/admin_path.pl</span><br></pre></td></tr></table></figure><br>声明：除脚本安装外，不会请求除宝塔官网外任何第三方网站，也无需搭建第三方云端。</p>]]></content>
     
     
       
@@ -38,8 +38,8 @@
   
   <entry>
     <title>9月20日 星期二 大雨</title>
-    <link href="https://www.qqb.icu/posts/1003/"/>
-    <id>https://www.qqb.icu/posts/1003/</id>
+    <link href="https://www.qqb.icu/posts/1002/"/>
+    <id>https://www.qqb.icu/posts/1002/</id>
     <published>2022-09-20T02:48:00.000Z</published>
     <updated>2022-09-20T02:48:51.072Z</updated>
     
@@ -60,8 +60,8 @@
   
   <entry>
     <title>科学上网分享</title>
-    <link href="https://www.qqb.icu/posts/1005/"/>
-    <id>https://www.qqb.icu/posts/1005/</id>
+    <link href="https://www.qqb.icu/posts/1006/"/>
+    <id>https://www.qqb.icu/posts/1006/</id>
     <published>2022-09-19T13:42:00.000Z</published>
     <updated>2022-09-20T02:49:06.430Z</updated>
     
@@ -82,8 +82,8 @@
   
   <entry>
     <title>9月17日 星期六 晴</title>
-    <link href="https://www.qqb.icu/posts/1003/"/>
-    <id>https://www.qqb.icu/posts/1003/</id>
+    <link href="https://www.qqb.icu/posts/1002/"/>
+    <id>https://www.qqb.icu/posts/1002/</id>
     <published>2022-09-17T15:06:00.000Z</published>
     <updated>2022-09-20T03:08:50.336Z</updated>
     
@@ -104,8 +104,8 @@
   
   <entry>
     <title>9月16日 星期五 小雨</title>
-    <link href="https://www.qqb.icu/posts/1001/"/>
-    <id>https://www.qqb.icu/posts/1001/</id>
+    <link href="https://www.qqb.icu/posts/1003/"/>
+    <id>https://www.qqb.icu/posts/1003/</id>
     <published>2022-09-16T15:30:00.000Z</published>
     <updated>2022-09-16T15:36:17.928Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>9月15日 星期四 小雨转阴</title>
-    <link href="https://www.qqb.icu/posts/1002/"/>
-    <id>https://www.qqb.icu/posts/1002/</id>
+    <link href="https://www.qqb.icu/posts/1001/"/>
+    <id>https://www.qqb.icu/posts/1001/</id>
     <published>2022-09-15T13:58:00.000Z</published>
     <updated>2022-09-16T15:36:42.480Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>9月12日 星期一 晴</title>
-    <link href="https://www.qqb.icu/posts/1002/"/>
-    <id>https://www.qqb.icu/posts/1002/</id>
+    <link href="https://www.qqb.icu/posts/1003/"/>
+    <id>https://www.qqb.icu/posts/1003/</id>
     <published>2022-09-12T05:14:00.000Z</published>
     <updated>2022-09-16T15:36:56.678Z</updated>
     
@@ -336,9 +336,9 @@
     <link href="https://www.qqb.icu/posts/6691/"/>
     <id>https://www.qqb.icu/posts/6691/</id>
     <published>2022-08-31T22:55:00.000Z</published>
-    <updated>2022-09-16T15:32:20.681Z</updated>
+    <updated>2022-09-25T02:37:47.854Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="tip "><p>记录一些常用的命令</p></div><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">X-UI面板安装&&升级</button></li><li class="tab"><button type="button" data-href="#-2">Vmess代理节点搭建</button></li><li class="tab"><button type="button" data-href="#-3">BBR一键加速脚本</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://www.qqb.icu/sh/x-ui.sh)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://www.qqb.icu/sh/v2ray.sh)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-3"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget <span class="string">&quot;https://www.qqb.icu/sh/tcp.sh&quot;</span> &amp;&amp; <span class="built_in">chmod</span> +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="tip "><p>记录一些常用的命令</p></div><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">X-UI面板安装&&升级</button></li><li class="tab"><button type="button" data-href="#-2">Vmess代理节点搭建</button></li><li class="tab"><button type="button" data-href="#-3">BBR一键加速脚本</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://qqb.icu/sh/x-ui.sh)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://qqb.icu/sh/v2ray.sh)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-3"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget <span class="string">&quot;https://qqb.icu/sh/tcp.sh&quot;</span> &amp;&amp; <span class="built_in">chmod</span> +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>]]></content>
     
     
     <summary type="html">比较常用的脚本</summary>
