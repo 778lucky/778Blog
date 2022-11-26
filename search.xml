@@ -4,12 +4,37 @@
   
     
     <entry>
+      <title>巧用谷歌云，免费创建固定IP的RDP桌面</title>
+      <link href="/posts/21118/"/>
+      <url>/posts/21118/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="先登录谷歌云"><a href="#先登录谷歌云" class="headerlink" title="先登录谷歌云"></a>先登录谷歌云</h2><p>地址：<a href="https://cloud.google.com/?hl=zh-cn">https://cloud.google.com/?hl=zh-cn</a></p><h2 id="右上角激活-cloud-shell"><a href="#右上角激活-cloud-shell" class="headerlink" title="右上角激活 cloud shell"></a>右上角激活 cloud shell</h2><p><img src="https://wenjie.org/upload/2022/10/%E6%BF%80%E6%B4%BB%20shell.JPG" alt=""></p><h2 id="激活成功后直接执行下面代码"><a href="#激活成功后直接执行下面代码" class="headerlink" title="激活成功后直接执行下面代码"></a>激活成功后直接执行下面代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:80 dorowu/ubuntu-desktop-lxde-vnc</span><br></pre></td></tr></table></figure><h3 id="点击：在网页预览"><a href="#点击：在网页预览" class="headerlink" title="点击：在网页预览"></a>点击：在网页预览</h3><p>现在，你应该能看到RDP桌面了，OK，让我们打开浏览器，测速居然有1.5G！！伪装也还行，IP是固定的。<br><img src="https://wenjie.org/upload/2022/10/%E9%A2%84%E8%A7%88.JPG" alt=""></p><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、此桌面约30-120分钟有效；关闭shell窗口RDP桌面会断开，但是可以重复执行docker命令重建，遇到端口占用可修改命令端口如 8081；</p><p>2、每个账户的RDP桌面IP不一定在哪里，有的是荷兰，有的是美国，这个我不清楚咋回事；</p><p>3、目前测试GCP账户都可用，你可以用你的余生不停的创建容器，永久白嫖！同一个账号的文件不会丢失！</p><p>说明：转载自 YouTUbe博主 <a href="https://www.youtube.com/@iis">梅塔沃克</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vps常用测试脚本</title>
       <link href="/posts/55961/"/>
       <url>/posts/55961/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本文将整理vps常用的测试脚本，所有资源来自于网络，若有侵权，请联系我删除，另外感谢脚本的作者们！</p><h2 id="Bench-sh"><a href="#Bench-sh" class="headerlink" title="Bench.sh"></a>Bench.sh</h2><p>显示当前测试的各种系统信息；<br>取自世界多处的知名数据中心的测试点，下载测试比较全面；<br>支持 IPv6 下载测速；</p><p>使用方法：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- bench.sh | bash</span><br><span class="line">或者</span><br><span class="line">curl -Lso- bench.sh | bash</span><br></pre></td></tr></table></figure><br>演示图：<br><img src="https://wenjie.org/upload/2022/10/%E6%88%AA%E5%B1%8F2022-10-31%2014.12.00.png" alt=""></p><h2 id="LemonBench-sh"><a href="#LemonBench-sh" class="headerlink" title="LemonBench.sh"></a>LemonBench.sh</h2><ol><li>服务器基础信息(CPU信息/内存信息/Swap信息/磁盘空间信息等)；</li><li>Speedtest网速测试 (本地到最近源及国内各地域不同线路的网速)；</li><li>磁盘测试(4K块/1M块 直接写入测试)；</li><li>可以进行简单的流媒体测试；</li></ol><p>使用方法：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full</span><br></pre></td></tr></table></figure></p><p>演示图<br><img src="https://wenjie.org/upload/2022/10/%E6%88%AA%E5%B1%8F2022-10-31%2014.17.16.png" alt=""></p><h2 id="流媒体检测："><a href="#流媒体检测：" class="headerlink" title="流媒体检测："></a>流媒体检测：</h2><p>看看你的vps是否支持奈飞等多种流媒体！<br>使用方法<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.6/nf_2.6_linux_amd64 &amp;&amp; chmod +x nf &amp;&amp; clear &amp;&amp; ./nf</span><br></pre></td></tr></table></figure><br>演示图<br><img src="https://wenjie.org/upload/2022/10/%E6%88%AA%E5%B1%8F2022-10-31%2014.24.41.png" alt=""></p><p>说明：转载自 YouTUbe博主 <a href="https://www.youtube.com/@iis">梅塔沃克</a></p>]]></content>
       
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
       
       
     </entry>
