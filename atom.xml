@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>778博客</title>
+  <icon>https://www.gravatar.com/avatar/cfdfb8fbc37fef937020033121a3943e</icon>
+  
+  <link href="https://qqb.icu/atom.xml" rel="self"/>
+  
+  <link href="https://qqb.icu/"/>
+  <updated>2022-11-26T10:37:56.434Z</updated>
+  <id>https://qqb.icu/</id>
+  
+  <author>
+    <name>778</name>
+    <email>1878966904@qq.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CC流量攻击不花钱的处理方案</title>
+    <link href="https://qqb.icu/posts/52002/"/>
+    <id>https://qqb.icu/posts/52002/</id>
+    <published>2022-11-26T10:23:00.000Z</published>
+    <updated>2022-11-26T10:37:56.434Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>对于一个站长来说，网站被“打”这样的事情是经常发生的。如果是某人测试软件，随便搞一下还好说，如果是有团伙、有目的，这样的攻击就很难防也很浪费银两。</p><p>如果说公司资金实力雄厚，用超大的带宽硬扛倒是可以，不过投入的资金相当多；一般小站会选择使用高防的CDN或者WAF，这两项服务也都是收费的，WAF每月要$100左右，钱花起来还是比较心疼的。所以，我看到的99%的个人站长选择使用CF的WAF免费服务，牺牲网站的速度来应对攻击，这也是无奈之举。</p><p>我在攻防这方面是菜鸟，本文只能说是针对个别人对你的网站进行小小的“压力测试”做一个简单的应对教程。</p><p>当你的服务器cpu跑满、带宽跑满、同时连接数超高，有以上几种情况发生，99%就是被cc攻击了。那么我们该怎么办呢？</p><p>一、尽快连接服务器，查看异常流量，这里我推荐使用iftop；<br>安装并启动iftop：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install iftop</span><br><span class="line">iftop</span><br></pre></td></tr></table></figure><br>二、iftop查看异常流量的IP，然后使用防火墙禁止；<br>当然建议使用安全组规则将异常流量直接隔离，可是我发现有些厂商不能设置拒绝的策略，那么只能等待流量到达服务器中，然后在处理；</p><p>具体方法：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -s IP -j DROP</span><br><span class="line">iptables -save</span><br></pre></td></tr></table></figure><br>也可以直接禁止这个IP段访问<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -s 121.1.1.0/24 -j DROP</span><br><span class="line">iptables -I INPUT -s 121.1.0.0/16 -j DROP</span><br><span class="line">iptables -I INPUT -s 121.0.0.0/8 -j DROP</span><br></pre></td></tr></table></figure><br>更多关于iptables命令详解，自己参考一下Linux的教程网站。</p><p>说明：转载自YouTube博主 <a href="https://www.youtube.com/@iis">梅塔沃克</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>利用宝塔部署V2Board</title>
+    <link href="https://qqb.icu/posts/19299/"/>
+    <id>https://qqb.icu/posts/19299/</id>
+    <published>2022-10-30T06:32:00.000Z</published>
+    <updated>2022-11-26T10:38:37.621Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="配置宝塔"><a href="#配置宝塔" class="headerlink" title="配置宝塔"></a>配置宝塔</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##宝塔一键安装脚本</span><br><span class="line">bash &lt;(curl -ls https://raw.githubusercontent.com/778lucky/sh/main/install_panel.sh)</span><br><span class="line">##一键升级开心版（不需要的可以忽略）</span><br><span class="line">bash &lt;(curl -ls https://raw.githubusercontent.com/778lucky/sh/main/bt_happy.sh)</span><br></pre></td></tr></table></figure><p>安装完成后我们登陆 宝塔 进行环境的安装。</p><p>选择使用LNMP的环境安装方式勾选如下信息</p><p>☑️ Nginx 1.17<br>☑️ MySQL 5.6<br>☑️ PHP 7.4</p><h2 id="安装Redis、fileinfo"><a href="#安装Redis、fileinfo" class="headerlink" title="安装Redis、fileinfo"></a>安装Redis、fileinfo</h2><p>宝塔 面板 &gt; 软件商店 &gt; 找到PHP 7.4点击设置 &gt; 安装扩展 &gt; <code>redis</code>,<code>fileinfo</code> 进行安装。</p><h2 id="解除被禁止的函数"><a href="#解除被禁止的函数" class="headerlink" title="解除被禁止的函数"></a>解除被禁止的函数</h2><p>aaPanel 面板 &gt; App Store &gt; 找到PHP 7.4点击设置 &gt; 禁用函数 将<code>putenv</code> <code>proc_open</code> <code>pcntl_alarm</code> <code>pcntl_signal</code> 从列表中删除。</p><h2 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h2><p>宝塔 面板 &gt; 网站 &gt; 添加站点。</p><p>在 域名 填入你指向服务器的域名<br>在 数据库 选择MySQL<br>在 PHP 版本 选择PHP-74</p><h2 id="安装V2Board"><a href="#安装V2Board" class="headerlink" title="安装V2Board"></a>安装V2Board</h2><p>通过SSH登录到服务器后访问站点路径如：/www/wwwroot/你的站点域名。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /www/wwwroot/你的站点域名</span><br></pre></td></tr></table></figure><br>以下命令都需要在站点目录进行执行。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 删除目录下文件</span><br><span class="line">chattr -i .user.ini</span><br><span class="line">rm -rf .htaccess 404.html index.html .user.ini</span><br></pre></td></tr></table></figure><p>执行命令从 Github 克隆到当前目录。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/v2board/v2board.git ./</span><br></pre></td></tr></table></figure><br>执行命令安装依赖包以及V2board<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh init.sh</span><br></pre></td></tr></table></figure><br>根据提示完成安装</p><h2 id="配置站点目录及伪静态"><a href="#配置站点目录及伪静态" class="headerlink" title="配置站点目录及伪静态"></a>配置站点目录及伪静态</h2><p>添加完成后编辑添加的站点 &gt; 站点目录 &gt; 运行目录 选择 /public 保存。</p><p>添加完成后编辑添加的站点 &gt; 伪静态 填入伪静态信息。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">location /downloads &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location / &#123;  </span><br><span class="line">    try_files $uri $uri/ /index.php$is_args$query_string;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location ~ .*\.(js|css)?$</span><br><span class="line">&#123;</span><br><span class="line">    expires      1h;</span><br><span class="line">    error_log off;</span><br><span class="line">    access_log /dev/null; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="配置定时任务"><a href="#配置定时任务" class="headerlink" title="配置定时任务"></a>配置定时任务</h2><p>宝塔 面板 &gt; 计划任务。</p><ol><li>在 任务类型 选择 Shell 脚本</li><li>在 任务名称 填写 v2board</li><li>在 执行周期 选择 每分钟一次</li><li>在 脚本内容 填写 php /www/wwwroot/路径/artisan schedule:run</li></ol><p>根据上述信息添加每1分钟执行一次的定时任务。</p><h2 id="启动队列服务"><a href="#启动队列服务" class="headerlink" title="启动队列服务"></a>启动队列服务</h2><p>V2board的系统强依赖队列服务，正常使用V2Board必须启动队列服务。下面以aaPanel中supervisor服务来守护队列服务作为演示。</p><p>宝塔 面板 &gt; 软件商店 &gt; 搜索<code>Supervisor管理器</code></p><p>找到Supervisor进行安装，安装完成后点击设置 &gt; 添加守护进程 按照如下填写</p><p>在 名称 填写 V2board<br>在 启动用户 选择 www<br>在 运行目录 选择 站点目录 在 启动命令 填写 php artisan horizon 在 进程数量 填写 1</p><p>填写后点击确定添加即可运行。</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>Q：500错误<br>A：检查站点根目录权限，递归755，保证目录有可写文件的权限，也有可能是Redis扩展没有安装或者Redis没有按照造成的。你可以通过查看storage/logs下的日志来排查错误或者开启debug模式、站点设置中关闭防跨站。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>服务器用Root用户登录</title>
+    <link href="https://qqb.icu/posts/38820/"/>
+    <id>https://qqb.icu/posts/38820/</id>
+    <published>2022-10-23T11:43:00.000Z</published>
+    <updated>2022-11-26T10:38:11.690Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="切换到root用户"><a href="#切换到root用户" class="headerlink" title="切换到root用户"></a>切换到<strong>root</strong>用户</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure><h4 id="修改Root用户密码"><a href="#修改Root用户密码" class="headerlink" title="修改Root用户密码"></a>修改Root用户密码</h4><p>输入<code>passwd root</code>，然后输入两次密码</p><h4 id="编辑ssh配置文件"><a href="#编辑ssh配置文件" class="headerlink" title="编辑ssh配置文件"></a>编辑ssh配置文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure><p>找到<strong>PermitRootLogin</strong>, 把前面的<strong>#</strong>去掉 改成下面这样<br><strong>PermitRootLogin yes</strong></p><p>按Esc，然后<code>:wq</code>保存退出</p><h4 id="Oracle云关闭防火墙"><a href="#Oracle云关闭防火墙" class="headerlink" title="Oracle云关闭防火墙"></a>Oracle云关闭防火墙</h4><p><code>iptables -P INPUT ACCEPT</code><br><code>iptables -P FORWARD ACCEPT</code><br><code>iptables -P OUTPUT ACCEPT</code><br><code>iptables -F</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>服务器流媒体解锁</title>
+    <link href="https://qqb.icu/posts/9162/"/>
+    <id>https://qqb.icu/posts/9162/</id>
+    <published>2022-10-23T00:13:00.000Z</published>
+    <updated>2022-11-08T02:09:31.424Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="流媒体解锁测试"><a href="#流媒体解锁测试" class="headerlink" title="流媒体解锁测试"></a>流媒体解锁测试</h3><p>项目地址：<a href="https://github.com/lmc999/RegionRestrictionCheck">https://github.com/lmc999/RegionRestrictionCheck</a><br>注意事项：在执行前请先确保安装了curl，安装命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##Centos:</span></span><br><span class="line">yum install -y curl</span><br><span class="line"><span class="comment">##Debian/Ubuntu：</span></span><br><span class="line">apt install -y curl</span><br></pre></td></tr></table></figure><br>脚本命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -L -s check.unlock.media)</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>逆流河上众仙退，爱情不敌坚持泪！</title>
+    <link href="https://qqb.icu/posts/23172/"/>
+    <id>https://qqb.icu/posts/23172/</id>
+    <published>2022-10-08T00:54:00.000Z</published>
+    <updated>2022-11-08T01:58:20.358Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第二百六十五节：方源的坚持！"><a href="#第二百六十五节：方源的坚持！" class="headerlink" title="第二百六十五节：方源的坚持！"></a>第二百六十五节：方源的坚持！</h2><p> “你若是认为，等到我们混战，寻机脱身，那你就趁早打消这个主意吧。我雪胡今日的<br>目标，就只有你一个。你知不知道，我为了炼制鸿运齐天蛊，付出了多少的代价？你坏我修<br>行大事，就是我生平最仇恨的人。我不把你杀死，难消我心头之恨！”雪胡老祖阴森森地望<br>着方源，一番话像是一波冰凉彻骨的冷水，浇在方源的心头。<br> 但方源仍旧面无表情。<br> 他就像一个石头，一个铁做的聋哑人，任何的话语，不管是威胁还是引诱，都没有任何<br>的效果。<br> 时间流逝，方源在不断前行。<br> 不知不觉间，狗尾续命貂毛里球的吼叫声，低弱了下来。<br> 这头巨大的紫貂，脸上的神情发生了变化。<br> 它用一种很古怪，充满难以置信的语气，望着方源呢喃开口道：“不会吧……”<br> “不会什么？”玄极子感到奇怪。<br> 就在这一刻，雪胡老祖、碧晨天、威灵仰的脸上，也都发生了微微的变化。<br> 他们也感应到了什么。<br> 很快，在场其他的蛊仙也俱都动容，纷纷惊呼出声。<br> “唉？”<br> “这是蛊虫的气息？但又有些似是而非！”<br> “什么蛊虫？不可能，难道他也有九转仙蛊不成？”<br> “不对劲。这不是仙蛊的气息，或者说不完整，好古怪！”<br> 忽然，余艺冶子双眼一亮，他猜到了真相，脱口而出：“这个情形，他正在炼蛊！”<br> 立即有蛊仙嗤笑：“怎么可能？在逆流河中炼蛊？”<br> 是啊。<br> 逆流河中无法动用蛊虫，除非是九转仙蛊。<br> 方源虽有智慧蛊，但留在了琅琊福地，他根本无法动用任何蛊虫，更遑论炼蛊。<br> 方源也感受到了体内的玄妙变化。<br> 他面无表情，心中却是震动：“似乎……真的在炼蛊？这是怎么回事？随着我每一次前<br>行，体内的气息便壮大一分。怎么回事？”<br> 虽然方源并不了解具体的原委，但是他却明白，这似乎是他的转机！<br> 情况已经糟糕透顶，不管怎样，方源愿意继续试下去。<br> 他继续朝前走。<br> 一步又一步。<br> 他的步伐很稳定，面无表情，却给人一种相当强大的感觉。<br> “为什么他面无表情？”不知哪位蛊仙忽然开口问道。<br> 群仙这才反应过来。<br> 是啊。<br> 除去方源之外，其他跋涉之人，不是神情扭曲，就是痛苦万分，不是疯狂，就是哭泣。<br> 为什么方源，他始终面无表情？<br> 群仙沉默。<br> 他们都知道，问这个问题的人，其实内里更想问的是另外一个问题。<br> 那就是——<br> “为什么这个柳贯一，他能坚持这么久？并且，他似乎还能坚持更久，甚至能永远坚持<br>下去的样子！”<br> 这怎么可能？<br> 大家都被淘汰，都被逆流河冲刷出来。<br> 他怎么还留在这里，还一副留有余力的样子？<br> 凭什么是他？<br> 为什么是他！<br> 没有人能回答这个问题，所以蛊仙们沉默。<br> 片刻之后，随着方源不断的前行，他体内蛊虫的气息不断壮大，已经到了一个极致。<br> 很快，方源的身上，从内而外，开始散发出一种洁白的光辉。<br> “居然……真的发展成这个样子了！”毛里球看到这一幕，双眼瞪得溜圆，张口结舌，无法<br>相信眼前的景象。<br> “毛爷，这究竟是怎么回事？”玄极子忍耐不住，问道。<br> “唉！事到如今，我即便说出来，也无所谓了。”毛里球发出深深的叹息，脸上有一股深<br>深的挫败之色。<br> “他的体内，正在酝酿出一只仙蛊。这只仙蛊的名字，就叫做坚持！”毛里球语出惊人。<br> “坚持仙蛊？！”玄极子震惊无比。<br> 其他的蛊仙也好不到哪里去。<br> “《人祖传》中有言，坚持仙蛊就是可以征服逆流河的关键仙蛊？它不是不存在吗？”余<br>艺冶子发问。<br> “不，它存在。”碧晨天道。他是天庭蛊仙，知晓无数秘辛。<br> “并且曾经就有人掌管过它，那个人，便是天庭之主，元莲仙尊！”威灵仰补充道。<br> “什么？！”众人再惊。<br> “只是坚持仙蛊的炼法，我们从未料到，竟是这样子的。元莲仙尊也没有透露过。”碧晨<br>天摇头叹息。<br> “他当然不想透露。因为这可是他生平的一件丑事，嘿嘿嘿。”毛里球插言，任何打击天<br>庭声誉的事情，它都颇感兴趣的样子。<br> 此言立即换来施正义的叫嚷：“胡言乱语，仙尊之名，岂容你诋毁？！”<br> 能够当面和传奇太古荒兽叫嚣，施正义勇气可嘉，中洲不少蛊仙都不禁为他捏了一把<br>汗。<br> 毛里球却没有恼怒：“小娃娃，你懂什么？仙尊魔尊，修为虽高，但都是人。是人就有<br>感情，就有破绽，就有弱点。”<br> “当初元莲仙尊就是闯进逆流河，被困在河中，无法脱身。结果长期跋涉在最上游，导<br>致体内炼出了坚持仙蛊。从此之后，他就征服了逆流河，成为了历史上，逆流河的第一代主<br>人。”<br> “逆流河的第一代主人？”就连雪胡老祖都流露出吃惊的神色。这条逆流河落到他手中，<br>已经好一段时间了，没想到还有这等秘辛。<br> “这么说的话……”一下子，群仙的目光都转移到了方源的身上。<br> 毛里球叹息一声，目光深沉地望着沐浴在白光中的方源，无奈地道：“没有错。按照这<br>样的情形发展下去，他就要炼成坚持仙蛊，成为逆流河的第二代主人了！”<br> 众仙失语，就看着方源一步步朝前走去。<br> 他面无表情，不管走多少步，逆流河永远流淌在他的脚下，仿佛是绝大的命运的嘲笑。<br> 但是他仍旧走着。<br> 他从前世五百年走来，不知要走到什么时候。<br> 但他知道，自己要去往何方。<br> 似乎……没有人能阻止他。<br> 至少……如今的逆流中，已经无人可阻。<br> 前世五百年前。<br> 方源倚在竹楼上，看看山寨，又仰望背后的青茅山。<br> 双手握拳，稚嫩的小脸上，满是希冀。<br> “是时候放弃过去了。”<br> “穿越到这里来，这是我的福缘！因为在这里，可以实现长生。”<br> “我要把握这样难得的机会！不然，怎么对得起自己，对得起这份机缘？”<br> “当然，目前阶段，是提升我和弟弟的生活环境。嘿，那个小家伙……”<br> 开窍之后。<br> 演武场上，方源垂下头，一脸惊怒。<br> “被暗算了！”<br> “是谁暗算我？不愿意让我战胜对手？答案不言而喻！”<br> “哥哥，放弃吧，你不会是我的对手。因为天资不同，我们注定不同。”眼前的古月方正<br>带着快意道。<br> 方源转头就走，他的眼中全是坚定之色。<br> “既然山寨不栽培我，舅父舅母甚至都故意排挤我，我留在这里有什么意思？”<br> “难道在这里就可以变强，实现长生么？”<br> “不如出去？”<br> 商队里。<br> 大胡子蛊师死了，方源站在他的墓前。<br> 少年满含泪水，哽咽地道：“胡子大叔，你安息吧。”<br> “谢谢你临走前的礼物。”<br> “你说：小时候，你想成为顶天立地的人物，就像是正道的那些传奇人物那样。少年<br>时，觉得成为一族族长也不错。青年时，能够成为家老就感觉很棒了。中年后，被家族流<br>放，发现其实能养得活自己，养得起身上的蛊虫，就能让自己满意。”<br> “我不会这样，让梦想随着年龄而萎缩。”<br> “这个世界太大，而我们都是小人物……但我会加油的！会一直努力！”<br> ……<br> 童年、少年、青年。<br> 青茅山、商队，一路行走。<br> 壮年、老年，终究获得寿蛊。<br> 南疆、西漠、东海、中洲。<br> 春秋蝉重生后，青茅山、三王山、狐仙福地、王庭福地、义天山、逆流河！<br> 一步步走来，一路风雨。<br> 碧晨天皱起眉头，他盯着方源的身影，心中呢喃道：“这是何等的意志！他究竟为什么<br>坚持？是什么能让他如此坚持？”<br> 雪胡老祖冷哼，眼中闪过郑重之色，再无之前面对一般七转蛊仙的轻蔑：“这么说来，<br>三十万年前有元莲，三十万后有柳贯一……逆流河主啊。”<br> 毛里球望着方源身上越盛的光辉，无可奈何，龇牙咧嘴，爪子下意识地在地面上挠，挠<br>出道道深痕。<br> 白凝冰、黑楼兰俱都眼角狂跳，神情动容。<br> 赵怜云此刻悠悠醒转，她望着方源另一个胳膊下夹着的，马鸿运的尸体，她的眼泪夺眶<br>而出。<br> 她在心中哭嚎：“鸿运，鸿运，你怎么可以离我而去。没有了你，我在这个世界上，就<br>是孤家寡人。我活着还有什么意思？你知道吗？一个人的坚持是有多难！”<br> 一个人的坚持会有多难？<br> 在场的所有蛊仙，都能回答这个问题。<br> 因为他们当中，有的因为责任而坚持，有的因为仇恨而坚持，有的因为精彩而坚持，有<br>的因为爱情而坚持……<br> 而方源的回答呢？<br> 他仍旧面无表情，毫无所动地向前进。<br> 我曾经呐喊过，渐渐的我不发出声音。<br> 我曾经哭泣过，渐渐的我不再流泪。<br> 我曾经悲伤过，渐渐的我能承受一切。<br> 我曾经喜悦过，渐渐的我看淡世间。<br> 而如今！<br> 我只剩下面无表情，我的目光如磐石般坚硬，我的心中剩下坚持。<br> 这就是我，一个小人物，方源的——坚持！<br> 光芒骤放，不可逼视。<br> 坚持仙蛊，在这一刻，炼成！！！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="小说" scheme="https://qqb.icu/categories/%E5%B0%8F%E8%AF%B4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一分钟搭建X-UI面板</title>
+    <link href="https://qqb.icu/posts/27366/"/>
+    <id>https://qqb.icu/posts/27366/</id>
+    <published>2022-10-03T11:25:00.000Z</published>
+    <updated>2022-10-29T08:14:47.733Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="执行-sudo-i-切换到root用户"><a href="#执行-sudo-i-切换到root用户" class="headerlink" title="执行 sudo -i 切换到root用户"></a>执行 <code>sudo -i</code> 切换到root用户</h4><h4 id="执行X-UI一键脚本"><a href="#执行X-UI一键脚本" class="headerlink" title="执行X-UI一键脚本"></a>执行X-UI一键脚本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -<span class="built_in">ls</span> https://raw.githubusercontent.com/778lucky/sh/main/x-ui.sh)</span><br></pre></td></tr></table></figure><p>输入y，然后回车，后续就是自己设置用户名和密码以及X-UI面板的端口</p><p>打开浏览器输入 服务器ip:设置的端口 即搭建成功</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>10月3日 星期一 晴</title>
+    <link href="https://qqb.icu/posts/17650/"/>
+    <id>https://qqb.icu/posts/17650/</id>
+    <published>2022-10-03T11:23:00.000Z</published>
+    <updated>2022-10-23T14:05:57.438Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>宝塔Linux面板7.7开心版</title>
+    <link href="https://qqb.icu/posts/53087/"/>
+    <id>https://qqb.icu/posts/53087/</id>
+    <published>2022-09-25T01:39:00.000Z</published>
+    <updated>2022-11-26T10:39:07.179Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="简介说明"><a href="#简介说明" class="headerlink" title="简介说明"></a>简介说明</h4><p>发一下别人备份的7.7版本以及一键破解脚本。<br>新装面板，按照顺序依次安装7.7原版，执行一键破解脚本即可。<br>提示：破解有风险，请勿在正式环境中使用。本博客仅做收集备份。</p><h4 id="演示截图"><a href="#演示截图" class="headerlink" title="演示截图"></a>演示截图</h4><p><img src="https://cdn.staticaly.com/gh/778lucky/img@master/img/202210291613312.png" alt=""></p><h4 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -ls https://raw.githubusercontent.com/778lucky/sh/main/install_panel.sh)</span><br></pre></td></tr></table></figure><p>一键破解脚本<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -ls https://raw.githubusercontent.com/778lucky/sh/main/bt_happy.sh)</span><br></pre></td></tr></table></figure></p><p>删除面板安全登录入口<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f /www/server/panel/data/admin_path.pl</span><br></pre></td></tr></table></figure><br>声明：除脚本安装外，不会请求除宝塔官网外任何第三方网站，也无需搭建第三方云端。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月20日 星期二 大雨</title>
+    <link href="https://qqb.icu/posts/59813/"/>
+    <id>https://qqb.icu/posts/59813/</id>
+    <published>2022-09-20T02:48:00.000Z</published>
+    <updated>2022-10-23T14:05:46.216Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月17日 星期六 晴</title>
+    <link href="https://qqb.icu/posts/19980/"/>
+    <id>https://qqb.icu/posts/19980/</id>
+    <published>2022-09-17T15:06:00.000Z</published>
+    <updated>2022-10-23T14:05:33.066Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月16日 星期五 小雨</title>
+    <link href="https://qqb.icu/posts/37769/"/>
+    <id>https://qqb.icu/posts/37769/</id>
+    <published>2022-09-16T15:30:00.000Z</published>
+    <updated>2022-10-23T14:05:17.412Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月15日 星期四 小雨转阴</title>
+    <link href="https://qqb.icu/posts/9301/"/>
+    <id>https://qqb.icu/posts/9301/</id>
+    <published>2022-09-15T13:58:00.000Z</published>
+    <updated>2022-10-23T14:04:57.994Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="微信被限制了，运气真差，回归一下原始生活吧！"><a href="#微信被限制了，运气真差，回归一下原始生活吧！" class="headerlink" title="微信被限制了，运气真差，回归一下原始生活吧！"></a>微信被限制了，运气真差，回归一下原始生活吧！</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月12日 星期一 晴</title>
+    <link href="https://qqb.icu/posts/43172/"/>
+    <id>https://qqb.icu/posts/43172/</id>
+    <published>2022-09-12T05:14:00.000Z</published>
+    <updated>2022-10-23T14:04:44.445Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="又是做核酸的一天"><a href="#又是做核酸的一天" class="headerlink" title="又是做核酸的一天"></a>又是做核酸的一天</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月6日 星期二 晴</title>
+    <link href="https://qqb.icu/posts/35120/"/>
+    <id>https://qqb.icu/posts/35120/</id>
+    <published>2022-09-06T13:27:00.000Z</published>
+    <updated>2022-10-23T14:03:35.152Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月5日 星期一 晴</title>
+    <link href="https://qqb.icu/posts/11985/"/>
+    <id>https://qqb.icu/posts/11985/</id>
+    <published>2022-09-05T01:14:00.000Z</published>
+    <updated>2022-10-23T14:03:17.072Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月4日 星期天 晴</title>
+    <link href="https://qqb.icu/posts/35023/"/>
+    <id>https://qqb.icu/posts/35023/</id>
+    <published>2022-09-04T03:18:00.000Z</published>
+    <updated>2022-10-23T14:02:58.349Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月3日 星期六 小雨转阴</title>
+    <link href="https://qqb.icu/posts/16593/"/>
+    <id>https://qqb.icu/posts/16593/</id>
+    <published>2022-09-03T10:10:00.000Z</published>
+    <updated>2022-10-23T14:02:38.572Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>9月2日 星期五 晴</title>
+    <link href="https://qqb.icu/posts/47697/"/>
+    <id>https://qqb.icu/posts/47697/</id>
+    <published>2022-09-02T00:16:00.000Z</published>
+    <updated>2022-10-23T14:02:01.413Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="https://qqb.icu/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vs Code配置C语言环境</title>
+    <link href="https://qqb.icu/posts/40696/"/>
+    <id>https://qqb.icu/posts/40696/</id>
+    <published>2022-08-31T23:29:00.000Z</published>
+    <updated>2022-10-23T14:07:37.614Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><h2 id='vscode中配置-cc-环境'><span>VScode中配置 C/C++ 环境</span></h2><h4 id='1-下载编辑器vscode'><span>1. 下载编辑器VScode</span></h4><ul><li><p><span>官网：</span><a href='https://code.visualstudio.com/'><span>https://code.visualstudio.com/</span></a><span>（点链接时按下Ctrl，不会覆盖当前页面哦^-^）</span></p><p><img src=" /img/cyy/vscode下载.png" alt="下载指引" style="zoom: 40%;" /></p></li></ul><p><span>   </span></p><ul><li><p><span>安装VScode（建议附加任务全部勾选）</span></p><p><img src=" /img/cyy/vscode安装.gif" alt="vscode安装" style="zoom: 67%;" /></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><h4 id='2-下载编译器mingw并解压'><span>2. 下载编译器MinGW并解压</span></h4><ul><li><p><span>官网页面：</span><a href='https://www.mingw-w64.org/'><span>https://www.mingw-w64.org/</span></a></p></li><li><p><span>下载页面：</span><a href='https://sourceforge.net/projects/mingw-w64/files/'><span>https://sourceforge.net/projects/mingw-w64/files/</span></a></p><blockquote><p><span>你可以进入官网自行寻找</span></p><p><span>你也可以直接点击为你找好的下载页面</span></p></blockquote></li><li><p><span>下载页面中选择 </span><code>x86_64-win32-seh</code><span> 下载</span></p><p><img src=" /img/cyy/mingw下载.png" alt="mingw下载" style="zoom: 50%;" /></p><blockquote><p><span>如果你因为网络环境限制无法下载</span></p><p><span>不限速下载，请笑纳^-^：</span><a href='https://wwn.lanzouh.com/iLOip031ku6b' target='_blank' class='url'>https://wwn.lanzouh.com/iLOip031ku6b</a><span> 密码:1234</span></p></blockquote></li><li><p><span>在C盘中解压文件</span></p><p><img src=" /img/cyy/解压mingw.gif" style="zoom: 67%;" /></p><blockquote><p><span>理论上你可以在任何地方解压，但注意路径不能包含中文，至于特殊字符请自行测试</span></p></blockquote></li></ul><p>&nbsp;</p><p>&nbsp;</p><h4 id='3-将mingw添加至环境变量'><span>3. 将MinGW添加至环境变量</span></h4><ul><li><p><span>进入mingw64下的bin文件夹，复制当前路径，Win + i唤起系统设置，输入高级系统设置并进入，点击环境变量，选择path，编辑，新建，粘贴路径，按下三个确定</span></p><p><img src=" /img/cyy/配置环境变量.gif" style="zoom:67%;" /></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><h4 id=' /img/cyy/4-配置vscode插件'><span>4. 配置VScode插件</span></h4><ul><li><p><span>打开VScode安装插件 </span><code>Chinese</code><span> 和 </span><code>C/C++</code><span> ，等待安装完毕后重启VScode</span></p><p><img src=" /img/cyy/安装插件.gif" style="zoom:67%;" /></p><p>&nbsp;</p></li><li><p><span>切换C/C++插件至 </span><code>1.8.4</code><span> 版本</span></p><p><img src=" /img/cyy/版本退回.png" style="zoom: 80%;" /></p><blockquote><p><span>因最新版本不会自动生成launch.json文件，给后续优化带来不便，故退回旧版本。</span></p></blockquote></li></ul><p>&nbsp;</p><p>&nbsp;</p><h4 id=' /img/cyy/5-运行代码'><span>5. 运行代码</span></h4><ul><li><p><span>新建文件夹，修改为英文名称并进入，右键 </span><code>通过Code打开</code><span> 若在安装时未勾选相关选项，可能没有这个选项，请自行在VScode内操作打开文件夹</span></p></li><li><p><span>新建一个文件，英文命名且扩展名为 </span><code>.c</code><span> </span></p></li><li><p><span>编写相关代码</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="c"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="c"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.33333px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;stdio.h&gt;</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;stdlib.h&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-def">main</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">printf</span>(<span class="cm-string">"Hello World!\n"</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">printf</span>(<span class="cm-string">"你好世界！\n"</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">system</span>(<span class="cm-string">"pause"</span>);<span class="cm-tab" role="presentation" cm-text="    ">    </span><span class="cm-comment">// 防止运行后自动退出，需头文件stdlib.h</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-number">0</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 204px;"></div><div class="CodeMirror-gutters" style="display: none; height: 204px;"></div></div></div></pre></li><li><p><span>VScode菜单栏，点击运行，启动调试，稍等程序运行，输出结果在下方终端，上方调试面板，点击最右边的 </span><code>橙色方框</code><span> 停止程序运行</span></p></li></ul><p><img src=" /img/cyy/运行代码.gif" referrerpolicy="no-referrer"></p><p>&nbsp;</p><p>&nbsp;</p><h4 id=' /img/cyy/6-调整和优化'><span>6. 调整和优化</span></h4><blockquote><p><span>请根据自己的需要进行优化</span></p><p><span>代码运行后 </span><code>.vscode</code><span> 文件夹会自动生成在你的源文件目录下</span></p><p><code>.vscode</code><span> 文件夹下的 </span><code>task.json</code><span> 和 </span><code>launch.json</code><span> 用来控制程序的运行和调试</span></p></blockquote><ul><li><p><span>将程序运行在外部控制台【推荐】</span></p><ul><li><p><span>打开</span><code>.vscode</code><span> 文件夹下的 </span><code>launch.json</code><span> 文件，找到 </span><code>&quot;externalConsole&quot;: false,</code><span> 将 </span><code>false</code><span> 改为 </span><code>true</code><span> 并保存</span></p><p><img src=" /img/cyy/控制台.png" referrerpolicy="no-referrer"></p><p>&nbsp;</p></li></ul>&lt;/li&gt;<li><p><span>解决中文乱码问题【推荐】</span></p><ul><li><p><span>打开</span><code>.vscode</code><span> 文件夹下的 </span><code>task.json</code><span> 文件，找到 </span><code>&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</code><span> 在后面加上英文 </span><code>逗号</code><span> 然后回车到下一行，粘贴下面文本 </span><code>&quot;-fexec-charset=GBK&quot;</code><span> 并保存</span></p><p><img src=" /img/cyy/中文乱码.png" referrerpolicy="no-referrer"></p><p>&nbsp;</p></li>&lt;/ul&gt;&lt;/li&gt;<li><p><span>收纳生成的 </span><code>exe</code><span> 可执行文件【可选】</span></p><ul><li><p><span>打开</span><code>.vscode</code><span> 文件夹下的 </span><code>task.json</code><span> 文件，找到 </span><code>&quot;$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</code><span> </span></p></li><li><p><span>修改成 </span><code>&quot;$&#123;fileDirname&#125;\\coin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</code><span> 并保存，同理，</span><code>launch.json</code><span> 下也有相同的字段，需要你修改</span></p></li><li><p><span>在源文件同目录下新建 </span><code>coin</code><span> 文件夹，程序运行后，可执行文件将会生成在里面（其中 </span><code>coin</code><span> 可修改成你喜欢的英文名字）</span></p><blockquote><p><span>这样 </span><code>.c</code><span> 文件一多起来的时候，就不会出现 </span><code>.exe</code><span> 和 </span><code>.c</code><span> 相互穿插在目录中^-^</span></p></blockquote><p><img src=" /img/cyy/收纳exe.png" referrerpolicy="no-referrer"></p></li>&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;<p>&nbsp;</p><p>&nbsp;</p><h4 id=' /img/cyy/7-提示'><span>7. 提示</span></h4><ul><li><span>若源代码文件夹含有中文路径，将会无法编译程序。</span></li><li><span>若你的Windows用户名使用了中文，可能无法运行。</span></li><li><span>我知道GIF的自动播放，让你不知从何看起，没办法┗( T﹏T )┛</span></li></ul><p>&nbsp;</p><p>&nbsp;</p><h4 id=' /img/cyy/8-例行格式条款'><span>8. 转载说明</span></h4><ul><li><span>本文转自哔哩哔哩博主 “火星动力猿” ，感谢作者提供的文档！</span></li></p><script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux脚本</title>
+    <link href="https://qqb.icu/posts/6691/"/>
+    <id>https://qqb.icu/posts/6691/</id>
+    <published>2022-08-31T22:55:00.000Z</published>
+    <updated>2022-10-23T14:06:51.566Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="tip "><p>记录一些常用的命令</p></div><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">X-UI面板安装&&升级</button></li><li class="tab"><button type="button" data-href="#-2">Vmess代理节点搭建</button></li><li class="tab"><button type="button" data-href="#-3">BBR一键加速脚本</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -<span class="built_in">ls</span> https://raw.githubusercontent.com/778lucky/sh/main/x-ui.sh)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -<span class="built_in">ls</span> https://raw.githubusercontent.com/778lucky/sh/main/v2ray.sh)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-3"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -<span class="built_in">ls</span> https://raw.githubusercontent.com/778lucky/sh/main/bbr.sh)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+  </entry>
+  
+</feed>
