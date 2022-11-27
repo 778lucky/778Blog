@@ -8,7 +8,7 @@
       <link href="/posts/21118/"/>
       <url>/posts/21118/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="先登录谷歌云"><a href="#先登录谷歌云" class="headerlink" title="先登录谷歌云"></a>先登录谷歌云</h2><p>地址：<a href="https://cloud.google.com/?hl=zh-cn">https://cloud.google.com/?hl=zh-cn</a></p><h2 id="右上角激活-cloud-shell"><a href="#右上角激活-cloud-shell" class="headerlink" title="右上角激活 cloud shell"></a>右上角激活 cloud shell</h2><p><img src="https://wenjie.org/upload/2022/10/%E6%BF%80%E6%B4%BB%20shell.JPG" alt=""></p><h2 id="激活成功后直接执行下面代码"><a href="#激活成功后直接执行下面代码" class="headerlink" title="激活成功后直接执行下面代码"></a>激活成功后直接执行下面代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:80 dorowu/ubuntu-desktop-lxde-vnc</span><br></pre></td></tr></table></figure><h3 id="点击：在网页预览"><a href="#点击：在网页预览" class="headerlink" title="点击：在网页预览"></a>点击：在网页预览</h3><p>现在，你应该能看到RDP桌面了，OK，让我们打开浏览器，测速居然有1.5G！！伪装也还行，IP是固定的。<br><img src="https://wenjie.org/upload/2022/10/%E9%A2%84%E8%A7%88.JPG" alt=""></p><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、此桌面约30-120分钟有效；关闭shell窗口RDP桌面会断开，但是可以重复执行docker命令重建，遇到端口占用可修改命令端口如 8081；</p><p>2、每个账户的RDP桌面IP不一定在哪里，有的是荷兰，有的是美国，这个我不清楚咋回事；</p><p>3、目前测试GCP账户都可用，你可以用你的余生不停的创建容器，永久白嫖！同一个账号的文件不会丢失！</p><p>说明：转载自 YouTUbe博主 <a href="https://www.youtube.com/@iis">梅塔沃克</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="先登录谷歌云"><a href="#先登录谷歌云" class="headerlink" title="先登录谷歌云"></a>先登录谷歌云</h2><p>地址：<a href="https://cloud.google.com/?hl=zh-cn">https://cloud.google.com/?hl=zh-cn</a></p><h2 id="右上角激活-cloud-shell"><a href="#右上角激活-cloud-shell" class="headerlink" title="右上角激活 cloud shell"></a>右上角激活 cloud shell</h2><p><img src="https://wenjie.org/upload/2022/10/%E6%BF%80%E6%B4%BB%20shell.JPG" alt=""></p><h2 id="激活成功后直接执行下面代码"><a href="#激活成功后直接执行下面代码" class="headerlink" title="激活成功后直接执行下面代码"></a>激活成功后直接执行下面代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:80 dorowu/ubuntu-desktop-lxde-vnc</span><br></pre></td></tr></table></figure><h3 id="点击：在网页预览"><a href="#点击：在网页预览" class="headerlink" title="点击：在网页预览"></a>点击：在网页预览</h3><p>现在，你应该能看到RDP桌面了，OK，让我们打开浏览器，测速居然有1.5G！！伪装也还行，IP是固定的。</p><p><img src="https://wenjie.org/upload/2022/10/%E9%A2%84%E8%A7%88.JPG" alt=""></p><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、此桌面约30-120分钟有效；关闭shell窗口RDP桌面会断开，但是可以重复执行docker命令重建，遇到端口占用可修改命令端口如 8081；</p><p>2、每个账户的RDP桌面IP不一定在哪里，有的是荷兰，有的是美国，这个我不清楚咋回事；</p><p>3、目前测试GCP账户都可用，你可以用你的余生不停的创建容器，永久白嫖！同一个账号的文件不会丢失！</p><p>说明：转载自 YouTUbe博主 <a href="https://www.youtube.com/@iis">梅塔沃克</a></p>]]></content>
       
       
       <categories>
@@ -384,7 +384,7 @@
     
     
     <entry>
-      <title>Vs Code配置C语言环境</title>
+      <title>配置VScode编写C语言环境</title>
       <link href="/posts/40696/"/>
       <url>/posts/40696/</url>
       
