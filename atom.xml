@@ -6,7 +6,7 @@
   <link href="https://qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://qqb.icu/"/>
-  <updated>2022-11-28T11:26:09.040Z</updated>
+  <updated>2022-11-28T11:28:07.629Z</updated>
   <id>https://qqb.icu/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://qqb.icu/posts/49309/"/>
     <id>https://qqb.icu/posts/49309/</id>
     <published>2022-11-28T11:19:37.000Z</published>
-    <updated>2022-11-28T11:26:09.040Z</updated>
+    <updated>2022-11-28T11:28:07.629Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>高级终端Termux 安卓刷流量终端链接：<a href="https://m.apkpure.com/cn/termux/com.termux">https://m.apkpure.com/cn/termux/com.termux</a></p><p>打开高级终端刷入下面的代码回车即可。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i=0</span><br><span class="line">while [ $((i++)) -le 999 ]</span><br><span class="line">do</span><br><span class="line">wget -O /dev/null http://download.h2os.com/OnePlus6T/MP/OnePlus6THydrogen_34_OTA_017_all_1812242338_ad6ff375f60c429e.zip</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>]]></content>
     
