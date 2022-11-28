@@ -6,7 +6,7 @@
   <link href="https://qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://qqb.icu/"/>
-  <updated>2022-11-28T11:28:07.629Z</updated>
+  <updated>2022-11-28T12:33:25.568Z</updated>
   <id>https://qqb.icu/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://qqb.icu/posts/49309/"/>
     <id>https://qqb.icu/posts/49309/</id>
     <published>2022-11-28T11:19:37.000Z</published>
-    <updated>2022-11-28T11:28:07.629Z</updated>
+    <updated>2022-11-28T12:33:25.568Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>高级终端Termux 安卓刷流量终端链接：<a href="https://m.apkpure.com/cn/termux/com.termux">https://m.apkpure.com/cn/termux/com.termux</a></p><p>打开高级终端刷入下面的代码回车即可。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i=0</span><br><span class="line">while [ $((i++)) -le 999 ]</span><br><span class="line">do</span><br><span class="line">wget -O /dev/null http://download.h2os.com/OnePlus6T/MP/OnePlus6THydrogen_34_OTA_017_all_1812242338_ad6ff375f60c429e.zip</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>高级终端Termux 安卓刷流量终端链接：<a href="https://m.apkpure.com/cn/termux/com.termux">https://m.apkpure.com/cn/termux/com.termux</a></p><p>打开高级终端刷入下面的代码回车即可。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while [ $((i++)) -le 999 ]</span><br><span class="line">do</span><br><span class="line">wget -O /dev/null http://bigota.d.miui.com/V10.0.1.0.OCAMIFH/miui_MI6Global_V10.0.1.0.OCAMIFH_1f4296c44e_8.0.zip</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>]]></content>
     
     
       
@@ -327,9 +327,9 @@
     <link href="https://qqb.icu/posts/9301/"/>
     <id>https://qqb.icu/posts/9301/</id>
     <published>2022-09-15T13:58:00.000Z</published>
-    <updated>2022-10-23T14:04:57.994Z</updated>
+    <updated>2022-11-28T12:07:19.323Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="微信被限制了，运气真差，回归一下原始生活吧！"><a href="#微信被限制了，运气真差，回归一下原始生活吧！" class="headerlink" title="微信被限制了，运气真差，回归一下原始生活吧！"></a>微信被限制了，运气真差，回归一下原始生活吧！</h2>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     
     
       
@@ -349,9 +349,9 @@
     <link href="https://qqb.icu/posts/43172/"/>
     <id>https://qqb.icu/posts/43172/</id>
     <published>2022-09-12T05:14:00.000Z</published>
-    <updated>2022-10-23T14:04:44.445Z</updated>
+    <updated>2022-11-28T12:07:10.632Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="又是做核酸的一天"><a href="#又是做核酸的一天" class="headerlink" title="又是做核酸的一天"></a>又是做核酸的一天</h2>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     
     
       
