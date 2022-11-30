@@ -11,13 +11,19 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>高级终端Termux 安卓刷流量终端链接：<a href="https://m.apkpure.com/cn/termux/com.termux">https://m.apkpure.com/cn/termux/com.termux</a></p><p>打开高级终端刷入下面的代码回车即可。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while [ $((i++)) -le 999 ]</span><br><span class="line">do</span><br><span class="line">wget -O /dev/null http://bigota.d.miui.com/V10.0.1.0.OCAMIFH/miui_MI6Global_V10.0.1.0.OCAMIFH_1f4296c44e_8.0.zip</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>]]></content>
       
       
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
       
     </entry>
     
     
     
     <entry>
-      <title>巧用谷歌云，免费创建固定IP的RDP桌面</title>
+      <title>用谷歌云CouldShell，创建永久免费RDP桌面</title>
       <link href="/posts/21118/"/>
       <url>/posts/21118/</url>
       

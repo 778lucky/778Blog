@@ -6,7 +6,7 @@
   <link href="https://qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://qqb.icu/"/>
-  <updated>2022-11-28T12:33:25.568Z</updated>
+  <updated>2022-11-30T08:05:05.869Z</updated>
   <id>https://qqb.icu/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>高级终端Termux 刷流量代码</title>
     <link href="https://qqb.icu/posts/49309/"/>
     <id>https://qqb.icu/posts/49309/</id>
-    <published>2022-11-28T11:19:37.000Z</published>
-    <updated>2022-11-28T12:33:25.568Z</updated>
+    <published>2022-11-28T11:19:00.000Z</published>
+    <updated>2022-11-30T08:05:05.869Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>高级终端Termux 安卓刷流量终端链接：<a href="https://m.apkpure.com/cn/termux/com.termux">https://m.apkpure.com/cn/termux/com.termux</a></p><p>打开高级终端刷入下面的代码回车即可。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while [ $((i++)) -le 999 ]</span><br><span class="line">do</span><br><span class="line">wget -O /dev/null http://bigota.d.miui.com/V10.0.1.0.OCAMIFH/miui_MI6Global_V10.0.1.0.OCAMIFH_1f4296c44e_8.0.zip</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -33,15 +33,17 @@
     
     
     
+    <category term="技术分享" scheme="https://qqb.icu/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
     
   </entry>
   
   <entry>
-    <title>巧用谷歌云，免费创建固定IP的RDP桌面</title>
+    <title>用谷歌云CouldShell，创建永久免费RDP桌面</title>
     <link href="https://qqb.icu/posts/21118/"/>
     <id>https://qqb.icu/posts/21118/</id>
     <published>2022-11-26T15:07:00.000Z</published>
-    <updated>2022-11-27T01:24:27.428Z</updated>
+    <updated>2022-11-30T08:06:06.801Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="先登录谷歌云"><a href="#先登录谷歌云" class="headerlink" title="先登录谷歌云"></a>先登录谷歌云</h2><p>地址：<a href="https://cloud.google.com/?hl=zh-cn">https://cloud.google.com/?hl=zh-cn</a></p><h2 id="右上角激活-cloud-shell"><a href="#右上角激活-cloud-shell" class="headerlink" title="右上角激活 cloud shell"></a>右上角激活 cloud shell</h2><p><img src="https://wenjie.org/upload/2022/10/%E6%BF%80%E6%B4%BB%20shell.JPG" alt=""></p><h2 id="激活成功后直接执行下面代码"><a href="#激活成功后直接执行下面代码" class="headerlink" title="激活成功后直接执行下面代码"></a>激活成功后直接执行下面代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:80 dorowu/ubuntu-desktop-lxde-vnc</span><br></pre></td></tr></table></figure><h3 id="点击：在网页预览"><a href="#点击：在网页预览" class="headerlink" title="点击：在网页预览"></a>点击：在网页预览</h3><p>现在，你应该能看到RDP桌面了，OK，让我们打开浏览器，测速居然有1.5G！！伪装也还行，IP是固定的。</p><p><img src="https://wenjie.org/upload/2022/10/%E9%A2%84%E8%A7%88.JPG" alt=""></p><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、此桌面约30-120分钟有效；关闭shell窗口RDP桌面会断开，但是可以重复执行docker命令重建，遇到端口占用可修改命令端口如 8081；</p><p>2、每个账户的RDP桌面IP不一定在哪里，有的是荷兰，有的是美国，这个我不清楚咋回事；</p><p>3、目前测试GCP账户都可用，你可以用你的余生不停的创建容器，永久白嫖！同一个账号的文件不会丢失！</p><p>说明：转载自 YouTUbe博主 <a href="https://www.youtube.com/@iis">梅塔沃克</a></p>]]></content>
     
@@ -85,7 +87,7 @@
     <link href="https://qqb.icu/posts/52002/"/>
     <id>https://qqb.icu/posts/52002/</id>
     <published>2022-11-26T10:23:00.000Z</published>
-    <updated>2022-11-27T01:24:47.856Z</updated>
+    <updated>2022-11-30T08:06:29.590Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>对于一个站长来说，网站被“打”这样的事情是经常发生的。如果是某人测试软件，随便搞一下还好说，如果是有团伙、有目的，这样的攻击就很难防也很浪费银两。</p><p>如果说公司资金实力雄厚，用超大的带宽硬扛倒是可以，不过投入的资金相当多；一般小站会选择使用高防的CDN或者WAF，这两项服务也都是收费的，WAF每月要$100左右，钱花起来还是比较心疼的。所以，我看到的99%的个人站长选择使用CF的WAF免费服务，牺牲网站的速度来应对攻击，这也是无奈之举。</p><p>我在攻防这方面是菜鸟，本文只能说是针对个别人对你的网站进行小小的“压力测试”做一个简单的应对教程。</p><p>当你的服务器cpu跑满、带宽跑满、同时连接数超高，有以上几种情况发生，99%就是被cc攻击了。那么我们该怎么办呢？</p><p>一、尽快连接服务器，查看异常流量，这里我推荐使用iftop；<br>安装并启动iftop：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install iftop</span><br><span class="line">iftop</span><br></pre></td></tr></table></figure><br>二、iftop查看异常流量的IP，然后使用防火墙禁止；<br>当然建议使用安全组规则将异常流量直接隔离，可是我发现有些厂商不能设置拒绝的策略，那么只能等待流量到达服务器中，然后在处理；</p><p>具体方法：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -s IP -j DROP</span><br><span class="line">iptables -save</span><br></pre></td></tr></table></figure><br>也可以直接禁止这个IP段访问<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -s 121.1.1.0/24 -j DROP</span><br><span class="line">iptables -I INPUT -s 121.1.0.0/16 -j DROP</span><br><span class="line">iptables -I INPUT -s 121.0.0.0/8 -j DROP</span><br></pre></td></tr></table></figure><br>更多关于iptables命令详解，自己参考一下Linux的教程网站。</p><p>说明：转载自YouTube博主 <a href="https://www.youtube.com/@iis">梅塔沃克</a></p>]]></content>
     
