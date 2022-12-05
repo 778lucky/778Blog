@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>778博客</title>
   <icon>https://www.gravatar.com/avatar/cfdfb8fbc37fef937020033121a3943e</icon>
-  
+  <subtitle>今日事，今日做。</subtitle>
   <link href="https://qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://qqb.icu/"/>
