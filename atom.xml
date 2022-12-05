@@ -6,7 +6,7 @@
   <link href="https://qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://qqb.icu/"/>
-  <updated>2022-12-05T11:48:46.527Z</updated>
+  <updated>2022-12-05T11:49:58.263Z</updated>
   <id>https://qqb.icu/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo文章插入bilibili 视频适配</title>
+    <title>hexo文章插入bilibili视频适配</title>
     <link href="https://qqb.icu/posts/14944/"/>
     <id>https://qqb.icu/posts/14944/</id>
     <published>2022-12-05T11:32:00.000Z</published>
-    <updated>2022-12-05T11:48:46.527Z</updated>
+    <updated>2022-12-05T11:49:58.263Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在写文章的时发现插入bilibili视频不适配，比较影响观看。在查阅了许多教程之后解决了这个问题。</p><h2 id="优化前"><a href="#优化前" class="headerlink" title="优化前"></a>优化前</h2><iframe src="//player.bilibili.com/player.html?aid=903290989&bvid=BV16P4y197J1&cid=909744025&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h2 id="优化后"><a href="#优化后" class="headerlink" title="优化后"></a>优化后</h2><div align="center" class="aspect-ratio"><iframe src="//player.bilibili.com/player.html?aid=903290989&bvid=BV16P4y197J1&cid=909744025&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><h2 id="优化教程"><a href="#优化教程" class="headerlink" title="优化教程"></a>优化教程</h2><p>第一步</p><p><code>source/css/custom.css</code>里，添加css的样式：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/*哔哩哔哩视频适配*/</span><br><span class="line">.aspect-ratio &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 0;</span><br><span class="line">  padding-bottom: 75%;</span><br><span class="line">  margin: 3% auto;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.aspect-ratio iframe &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100%;</span><br><span class="line">  left: 0;</span><br><span class="line">  top: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>然后在<code>inject head</code>里面引用</p><p>第二步</p><p>找一段bilibili视频嵌入代码，比如:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=903290989&amp;bvid=BV16P4y197J1&amp;cid=909744025&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div align=&quot;center&quot; class=&quot;aspect-ratio&quot;&gt;</span><br><span class="line">把视频嵌入代码加在中间，然后在文章里引用</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>值得注意的是，整个代码不能和其他文字连在一起，必须有间隔，不然会失效。</p>]]></content>
     
