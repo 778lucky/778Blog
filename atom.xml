@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>778博客</title>
+  <title>Akiranの778</title>
   <icon>https://www.gravatar.com/avatar/cfdfb8fbc37fef937020033121a3943e</icon>
-  <subtitle>今日事，今日做。</subtitle>
+  <subtitle>些许风霜罢了~</subtitle>
   <link href="https://qqb.icu/atom.xml" rel="self"/>
   
   <link href="https://qqb.icu/"/>
@@ -10,7 +10,7 @@
   <id>https://qqb.icu/</id>
   
   <author>
-    <name>778</name>
+    <name>球球8</name>
     <email>1878966904@qq.com</email>
   </author>
   
